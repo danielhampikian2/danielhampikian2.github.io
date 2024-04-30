@@ -1,0 +1,55 @@
+<!-- Start Portfolio -->
+<section id="portfolio" class="pb-10 pt-20">
+  <div class="mb-10 flex items-end justify-between">
+    <div class="mx-auto max-w-2xl text-center">
+      <span
+        class="rounded-md border border-primary bg-primary/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary"
+        >Our Portfolio</span
+      >
+      <h2 class="my-4 text-4xl font-medium capitalize text-default-950">
+        Selected Projects.
+      </h2>
+    </div>
+  </div>
+  <!-- flex End -->
+
+  <div>
+    <!--Start Swiper -->
+    <div id="auth_swiper" class="swiper relative rounded-md">
+      <swiper-container
+        class="swiper-wrapper"
+        init="false"
+        [config]="swiperConfig"
+      >
+        @for (item of Swiper; track $index) {
+          <swiper-slide class="swiper-slide">
+            <div class="group relative overflow-hidden rounded-3xl">
+              <img src="{{ item.image }}" class="h-full w-full" alt="" />
+              <div class="absolute inset-0 bg-black/60"></div>
+              <div
+                class="absolute inset-x-0 top-1/2 opacity-0 transition-all duration-700 group-hover:opacity-100"
+              >
+                <div class="text-center">
+                  <h5
+                    class="mb-1 inline-block bg-black px-3 py-1 text-xl font-medium text-white"
+                  >
+                    {{ item.title }}
+                  </h5>
+                  <br />
+                  <h2
+                    class="inline-block bg-black px-3 py-1 text-2xl font-medium text-white"
+                  >
+                    {{ item.content }}
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+        }
+        <!-- swiper-slide End -->
+      </swiper-container>
+    </div>
+    <!--End Swiper -->
+  </div>
+</section>
+<!-- End Portfolio -->

@@ -1,0 +1,88 @@
+{% load static %}
+{% block header %}
+<header id="navbar"
+    class="fixed inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center bg-white dark:bg-default-50 lg:bg-transparent [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
+    <div class="container">
+        <div class="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+            <div class="flex w-full items-center justify-between lg:w-auto">
+                <!-- Navbar Brand Logo -->
+                <a href="/">
+                    <img src="{% static 'images/logo-dark.png' %}" alt="logo" class="flex h-10 dark:hidden" />
+                    <img src="{% static 'images/logo-light.png' %}" alt="logo" class="hidden h-10 dark:flex" />
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button class="hs-collapse-toggle inline-block lg:hidden" id="hs-unstyled-collapse"
+                    data-hs-collapse="#mobileMenu" data-hs-type="collapse">
+                    <i data-lucide="menu" class="size-7 text-default-600 hover:text-default-900"></i>
+                </button>
+            </div>
+
+            <div id="mobileMenu"
+                class="hs-collapse mx-auto mt-2 hidden grow basis-full items-center justify-center overflow-hidden transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto">
+                <!-- Navigation Menu -->
+                <ul class="menu flex flex-col justify-center gap-y-2 lg:flex-row lg:items-center">
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#home">home
+                        </a>
+                    </li>
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#features">features
+                        </a>
+                    </li>
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#faq">faq
+                        </a>
+                    </li>
+
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#portfolio">portfolio
+                        </a>
+                    </li>
+
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#pricing">pricing
+                        </a>
+                    </li>
+
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#service">service
+                        </a>
+                    </li>
+
+                    <li
+                        class="menu-item text-default-800 transition-all hover:text-primary lg:mx-2 [&.active]:text-primary">
+                        <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+                            href="#blog">blog
+                        </a>
+                    </li>
+
+                    {% block landingNavbar %}
+                    {% include 'partials/landing-navbar2.html' %}
+                    {% endblock landingNavbar %}
+                </ul>
+            </div>
+
+            <div class="ms-auto hidden shrink gap-2 lg:inline-flex">
+                <a href="#"
+                    class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-1.5 text-base text-white transition-all hover:bg-primary-700">
+                    <i data-lucide="download-cloud" class="size-4 fill-white/40"></i>
+                    <span class="hidden sm:block">Download</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header %}

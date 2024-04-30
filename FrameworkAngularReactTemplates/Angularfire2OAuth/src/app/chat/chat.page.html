@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let message of messages | async">
+
+    <div class="message-wrapper" *ngIf="userDetails?.uid !== message.userUid">
+      <img class="profile-pic left" [src]="message.avatar"/>
+      <div class="chat-bubble left">
+        <div class="message" [innerHTML]="message.value | nl2br"></div>
+        <div class="message-detail">
+          <em class="bold">{{ message.fullName }}</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-wrapper" *ngIf="userDetails?.uid === message.userUid">
+      <img class="profile-pic right" [src]="userDetails?.avatar"/>
+      <div class="chat-bubble right">
+        <div class="message" [innerHTML]="message.value | nl2br"></div>
+        <div class="message-detail">
+          <em><b>You</b></em>
+        </div>
+      </div>
+    </div>
+
+    <div class="cf"></div>
+  </div>
+
+</ion-content>
+<form [formGroup]="chatControl" (ngSubmit)="sendMessage()">
+  <ion-footer class="message-footer" keyboard-attach>
+    <div class="message-form">
+      <ion-textarea [(ngModel)]='message' formControlName="message" placeholder="Write a message"></ion-textarea>
+      <ion-button type="submit" expand="full" color="secondary" [disabled]="!chatControl.valid">Send</ion-button>
+    </div>
+  </ion-footer>
+</form>

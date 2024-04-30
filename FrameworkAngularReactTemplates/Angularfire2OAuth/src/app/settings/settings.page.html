@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="userFormBuilder" (ngSubmit)="updateUserSettings()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Full name *</ion-label>
+        <ion-input type="text" formControlName="fullName"></ion-input>
+      </ion-item>
+      <ion-item class="form-error-list" *ngIf="!userFormBuilder.controls.fullName.pristine && !userFormBuilder.controls.fullName.valid">
+        <p class="form-error" item-right *ngIf="!userFormBuilder.controls.fullName.pristine && userFormBuilder.controls.fullName.hasError('required')">
+          This is a required field.
+        </p>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit" expand="full" color="secondary" [disabled]="!userFormBuilder.valid">Save</ion-button>
+  </form>
+  <p>UID: {{(authenticatorService.userDetails$ | async)?.uid}}</p>
+  <p>Email: {{(authenticatorService.userDetails$ | async)?.email}}</p>
+  <p>Provider: {{(authenticatorService.userDetails$ | async)?.provider}}</p>
+</ion-content>

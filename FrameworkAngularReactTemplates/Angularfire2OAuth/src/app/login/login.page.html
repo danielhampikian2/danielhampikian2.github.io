@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Firebase authentication</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <img class="logo" src="assets/icon/firebase_logo_shot.png">
+
+  <form [formGroup]="userFormBuilder" (ngSubmit)="login()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item class="form-error-list" *ngIf="!userFormBuilder.controls.email.pristine && !userFormBuilder.controls.email.valid">
+        <p class="form-error" item-right *ngIf="!userFormBuilder.controls.email.pristine && userFormBuilder.controls.email.hasError('required')">
+          This is a required field.
+        </p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item class="form-error-list" *ngIf="!userFormBuilder.controls.password.pristine && !userFormBuilder.controls.password.valid">
+        <p class="form-error" item-right *ngIf="!userFormBuilder.controls.password.pristine && userFormBuilder.controls.password.hasError('required')">
+          This is a required field.
+        </p>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" color="secondary" type="submit" [disabled]="!userFormBuilder.valid">Log in</ion-button>
+  </form>
+  <ion-button expand="full" (click)="signUp()">Sign up</ion-button>
+  <ion-button expand="full" (click)="resetPassword()">Lost your password?</ion-button>
+
+  <ion-button expand="full"(click)="signInWithOAuth('Facebook')">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    Facebook
+  </ion-button>
+  <ion-button expand="full"(click)="signInWithOAuth('Google')">
+    <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+    GooglePlus
+  </ion-button>
+  <ion-button expand="full"(click)="signInWithOAuth('Twitter')">
+    <ion-icon slot="start" name="logo-twitter"></ion-icon>
+    Twitter
+  </ion-button>
+  <ion-button expand="full"(click)="anonymousUser()">
+    <ion-icon slot="start" name="person"></ion-icon>
+    Anonymous
+  </ion-button>
+</ion-content>

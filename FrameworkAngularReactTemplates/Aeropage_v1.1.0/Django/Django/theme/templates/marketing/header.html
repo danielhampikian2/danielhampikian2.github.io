@@ -1,0 +1,92 @@
+{% load static %}
+{% block header %}
+<!-- Main Navigation Menu -->
+<header id="navbar"
+  class="fixed inset-x-0 top-0 z-60 transition-all duration-500 py-4 flex items-center bg-white dark:bg-default-50 lg:bg-transparent [&.nav-sticky]:bg-white/90 [&.nav-sticky]:backdrop-blur-3xl [&.nav-sticky]:shadow-md dark:[&.nav-sticky]:bg-default-50/80">
+  <div class="container">
+    <div class="flex items-center justify-between gap-4">
+      <div class="shrink">
+        <!-- Navbar Brand Logo -->
+        <a href="/">
+          <img src="{% static 'images/logo-dark.png' %}" alt="logo" class="flex h-10 dark:hidden" />
+          <img src="{% static 'images/logo-light.png' %}" alt="logo" class="hidden h-10 dark:flex" />
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="menu relative mx-auto hidden grow items-center justify-center lg:flex">
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#home">home
+          </a>
+        </li>
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#features">features
+          </a>
+        </li>
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#about">about
+          </a>
+        </li>
+
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#services">services
+          </a>
+        </li>
+
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#portfolio">portfolio
+          </a>
+        </li>
+
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#faq">faq
+          </a>
+        </li>
+
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#testimonial">testimonial
+          </a>
+        </li>
+
+        <li
+          class="menu-item mx-2 text-default-800 transition-all duration-300 hover:text-primary [&.active]:text-primary">
+          <a class="inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium capitalize lg:text-base"
+            href="#blog">blog
+          </a>
+        </li>
+
+        <!-- Dropdown Menu -->
+        {% block landingNavbar %}
+        {% include 'partials/landing-navbar.html' %}
+        {% endblock landingNavbar %}
+      </ul>
+
+      <div class="ms-auto inline-flex shrink gap-2">
+        <a href="#"
+          class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-1.5 text-base text-white transition-all hover:bg-primary-700">
+          <i data-lucide="download-cloud" class="size-4 fill-white/40"></i>
+          <span class="hidden sm:block">Download</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button class="inline-block lg:hidden" data-hs-overlay="#mobile-menu">
+          <i data-lucide="menu" class="size-7 text-default-600 hover:text-default-900"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock header %}

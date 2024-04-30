@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+{% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+{% endblock title-meta %} 
+
+{% block head-css %}
+    {% include 'partials/head-css.html' %}
+{% endblock head-css %}   
+
+</head>
+
+<body>
+<!-- =========== Navbar Start =========== -->
+{% block header %}
+    {% include 'index/header.html' %}
+{% endblock header %}
+
+{% block hero %}
+    {% include 'index/hero.html' %}
+{% endblock hero %}
+
+{% block landingDemo %}
+    {% include 'index/landingDemo.html' %}
+{% endblock landingDemo %}
+
+{% block adminDemo %}
+    {% include 'index/adminDemo.html' %}
+{% endblock adminDemo %}
+
+{% block securityDemo %}
+    {% include 'index/securityDemo.html' %}
+{% endblock securityDemo %}
+
+{% block features %}
+    {% include 'index/features.html' %}
+{% endblock features %}
+
+{% block footer %}
+{% include 'partials/footer.html' %}
+{% endblock footer %}
+
+<div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+        {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+    
+    {% block lightdark %}
+        {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+    
+</div>
+{% block javascripts %}
+  {% include 'partials/javascripts.html' %}
+{% endblock javascripts %}
+
+</body>
+</html>

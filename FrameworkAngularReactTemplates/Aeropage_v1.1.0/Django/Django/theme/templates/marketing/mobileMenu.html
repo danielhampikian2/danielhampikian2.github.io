@@ -1,0 +1,228 @@
+{% load static %}
+{% block mobileMenu %}
+<!-- Mobile Menu (Sidebar Menu) -->
+<div
+id="mobile-menu"
+class="hs-overlay fixed bottom-0 left-0 top-0 z-[61] hidden h-screen w-full max-w-[270px] -translate-x-full transform border-r border-default-200 bg-white transition-all hs-overlay-open:translate-x-0 dark:bg-default-50"
+tabindex="-1"
+>
+<div
+  class="flex h-16 items-center justify-center border-b border-dashed border-default-200 transition-all duration-300"
+>
+  <a href="/">
+    <img
+      src="{% static 'images/logo-dark.png' %}"
+      alt="logo"
+      class="flex h-10 dark:hidden"
+    />
+    <img
+      src="{% static 'images/logo-light.png' %}"
+      alt="logo"
+      class="hidden h-10 dark:flex"
+    />
+  </a>
+</div>
+<div class="h-[calc(100%-4rem)] overflow-y-auto">
+  <nav class="hs-accordion-group flex h-full w-full flex-col flex-wrap p-4">
+    <ul class="space-y-1">
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#home"
+          >home</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#features"
+          >features</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#about"
+          >about</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#services"
+          >services</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#portfolio"
+          >portfolio</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#faq"
+          >faq</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#testimonial"
+          >testimonial</a
+        >
+      </li>
+       
+      <li
+        class="rounded text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary [&.active]:bg-default-100 [&.active]:text-primary"
+      >
+        <a class="block w-full px-4 py-2.5" href="#blog"
+          >blog</a
+        >
+      </li>
+
+      <li class="hs-accordion" id="landing-accordion">
+        <a
+          class="hs-accordion-toggle flex items-center rounded px-4 py-2.5 text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary hs-accordion-active:bg-default-400/10 [&.active]:bg-default-100 [&.active]:text-primary"
+          href="javascript:;"
+        >
+          Landing
+          <i
+            data-lucide="chevron-down"
+            class="ms-auto size-5 transition-all hs-accordion-active:rotate-180"
+          ></i>
+        </a>
+
+        <div
+          id="landing-accordion"
+          class="hs-accordion-content hidden w-full overflow-hidden transition-[height]"
+        >
+          <ul class="ps-2 pt-2">
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/agency"
+                >Agency</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/agency2"
+                >Agency Two</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/charity"
+                >Charity</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/company"
+                >Company</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/creative"
+                >Creative</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/ebook"
+                >eBook</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/finance"
+                >Finance</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/hosting"
+                >Hosting</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/marketing"
+                >Marketing</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/marketing2"
+                >Marketing Two</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/marketing3"
+                >Marketing Three</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/photography"
+                >Photography</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/portfolio2"
+                >Portfolio Two</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/startup"
+                >Startup</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
+                href="/webdesigner"
+                >Web Designer</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+{% endblock mobileMenu %}

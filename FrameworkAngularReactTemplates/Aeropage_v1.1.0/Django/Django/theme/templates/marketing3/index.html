@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+    {% endblock title-meta %}
+  
+    {% block head-css %}
+    {% include 'partials/head-css.html' %}
+    {% endblock head-css %}
+
+</head>
+
+<body>
+    {% block header %}
+        {% include 'marketing3/header.html' %}
+    {% endblock header %}
+
+    {% block hero %}
+        {% include 'marketing3/hero.html' %}
+    {% endblock hero %}
+
+    {% block solutions %}
+        {% include 'marketing3/solutions.html' %}
+    {% endblock solutions %}
+
+    {% block projects %}
+        {% include 'marketing3/projects.html' %}
+    {% endblock projects %}
+
+    {% block section %}
+        {% include 'marketing3/section.html' %}
+    {% endblock section %}
+
+    {% block features %}
+        {% include 'marketing3/features.html' %}
+    {% endblock features %}
+
+    {% block section2 %}
+        {% include 'marketing3/section2.html' %}
+    {% endblock section2 %}
+
+    {% block section3 %}
+        {% include 'marketing3/section3.html' %}
+    {% endblock section3 %}
+
+    {% block marq %}
+        {% include 'marketing3/marq.html' %}
+    {% endblock marq %}
+
+    {% block faq %}
+        {% include 'marketing3/faq.html' %}
+    {% endblock faq %}
+
+    {% block section4 %}
+        {% include 'marketing3/section4.html' %}
+    {% endblock section4 %}
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+</body>
+
+</html>

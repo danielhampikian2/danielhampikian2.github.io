@@ -1,0 +1,74 @@
+{% load render_vite_bundle %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+    {% endblock title-meta %}
+  
+    {% block head-css %}
+    {% include 'partials/head-css.html' %}
+    {% endblock head-css %}
+
+</head>
+
+  <body>
+    {% block header %}
+        {% include 'webdesigner/header.html' %}
+    {% endblock header %}
+
+    {% block mobielMenu %}
+        {% include 'webdesigner/mobielMenu.html' %}
+    {% endblock mobielMenu %}
+
+    {% block hero %}
+        {% include 'webdesigner/hero.html' %}
+    {% endblock hero %}
+
+    {% block about %}
+        {% include 'webdesigner/about.html' %}
+    {% endblock about %}
+
+    {% block services %}
+        {% include 'webdesigner/services.html' %}
+    {% endblock services %}
+
+    {% block work %}
+        {% include 'webdesigner/work.html' %}
+    {% endblock work %}
+
+    {% block faq %}
+        {% include 'webdesigner/faq.html' %}
+    {% endblock faq %}
+
+    {% block stories %}
+        {% include 'webdesigner/stories.html' %}
+    {% endblock stories %}
+
+    {% block contact %}
+        {% include 'webdesigner/contact.html' %}
+    {% endblock contact %}
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+
+    {% render_vite_bundle 'js/gallery.js' %}
+    {% render_vite_bundle 'js/glightbox.js' %}
+  </body>
+</html>

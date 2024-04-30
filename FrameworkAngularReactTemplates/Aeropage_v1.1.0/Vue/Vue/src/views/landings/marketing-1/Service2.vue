@@ -1,0 +1,77 @@
+<template>
+  <section id="services" class="py-10 lg:py-20">
+    <div class="container">
+      <div>
+        <div class="mb-10 flex items-end justify-center">
+          <div class="mx-auto max-w-md text-center">
+            <span class="rounded-md border border-primary bg-primary/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary"
+              >Services</span
+            >
+            <h2 class="mt-4 text-3xl font-medium capitalize text-default-950">Highlighted Services</h2>
+          </div>
+        </div>
+
+        <div class="rounded-md border border-default-200 bg-white dark:bg-default-50">
+          <div class="grid 2xl:grid-cols-2">
+            <div class="divide-y divide-default-200">
+              <div v-for="(service, idx) in serviceData.slice(0, 3)" :key="service.title" class="flex items-center justify-between p-6">
+                <h3 class="text-2xl font-medium text-default-950">
+                  {{ service.title }}
+                </h3>
+                <div>
+                  <div
+                    class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-md border border-default-200 bg-default-50 text-default-950 transition-all duration-300 hover:bg-white hover:text-primary"
+                  >
+                    <MoveRightIcon class="h-6 w-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="divide-y divide-default-200 border-t border-default-200 2xl:border-s 2xl:border-t-0">
+              <div
+                v-for="(service, idx) in serviceData.slice(3, serviceData.length)"
+                :key="service.title"
+                class="flex items-center justify-between p-6"
+              >
+                <h3 class="text-2xl font-medium text-default-950">
+                  {{ service.title }}
+                </h3>
+                <div>
+                  <div
+                    class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-md border border-default-200 bg-default-50 text-default-950 transition-all duration-300 hover:bg-white hover:text-primary"
+                  >
+                    <MoveRightIcon class="h-6 w-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7 flex justify-center">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-2 rounded-md border border-default-200 px-8 py-2 text-default-950 backdrop-blur-3xl transition-all hover:border-primary hover:bg-primary hover:text-white"
+            >Get Solution
+            <ArrowRightIcon class="h-6 w-6" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { MoveRightIcon, ArrowRightIcon } from 'lucide-vue-next'
+import type { ServiceType } from '@/types/landing'
+
+const serviceData: ServiceType[] = [
+  { title: 'Brand Development Services' },
+  { title: 'Digital Product Development' },
+  { title: 'Media Strategy' },
+  { title: 'Marketing Services' },
+  { title: 'Information Technology Consulting' },
+  { title: 'Brand Identity Services' },
+]
+</script>

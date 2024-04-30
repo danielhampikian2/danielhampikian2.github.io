@@ -1,0 +1,77 @@
+{% load render_vite_bundle %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+    {% endblock title-meta %}
+  
+    {% block head-css %}
+    {% include 'partials/head-css.html' %}
+    {% endblock head-css %}
+
+</head>
+
+<body>
+    {% block header %}
+        {% include 'startup/header.html' %}
+    {% endblock header %}
+    
+    {% block hero %}
+        {% include 'startup/hero.html' %}
+    {% endblock hero %}
+
+    {% block about %}
+        {% include 'startup/about.html' %}
+    {% endblock about %}
+
+    {% block services %}
+        {% include 'startup/services.html' %}
+    {% endblock services %}
+
+    {% block section %}
+        {% include 'startup/section.html' %}
+    {% endblock section %}
+
+    {% block portfolio %}
+        {% include 'startup/portfolio.html' %}
+    {% endblock portfolio %}
+
+    {% block testimonials %}
+        {% include 'startup/testimonials.html' %}
+    {% endblock testimonials %}
+
+    {% block blog %}
+        {% include 'startup/blog.html' %}
+    {% endblock blog %}
+
+    {% block section2 %}
+        {% include 'startup/section2.html' %}
+    {% endblock section2 %}
+
+    
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+
+    {% render_vite_bundle 'js/glightbox.js' %}
+</body>
+
+</html>
