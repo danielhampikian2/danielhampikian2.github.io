@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+{% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+{% endblock title-meta %} 
+
+{% block head-css %}
+    {% include 'partials/head-css.html' %}
+{% endblock head-css %}
+
+</head>
+
+<body>
+    {% block header %}
+        {% include 'ebook/header.html' %}
+    {% endblock header %}
+    
+    {% block hero %}
+        {% include 'ebook/hero.html' %}
+    {% endblock hero %}
+
+    {% block about %}
+        {% include 'ebook/about.html' %}
+    {% endblock about %}
+
+    {% block benefits %}
+        {% include 'ebook/benefits.html' %}
+    {% endblock benefits %}
+
+    {% block courses %}
+        {% include 'ebook/courses.html' %}
+    {% endblock courses %}
+
+    {% block testimonials %}
+        {% include 'ebook/testimonials.html' %}
+    {% endblock testimonials %}
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+        {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+        {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+
+</body>
+
+</html>

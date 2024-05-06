@@ -1,0 +1,32 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.17",
+    "path": "^0.12.7",
+    "postcss": "^8.4.35",
+    "postcss-import": "^16.0.1",
+    "tailwindcss": "^3.4.1",
+    "tw-colors": "^3.3.1",
+    "vite": "^4.4.11",
+    "vite-plugin-live-reload": "^3.0.3"
+  },
+  "dependencies": {
+    "apexcharts": "^3.46.0",
+    "glightbox": "^3.2.0",
+    "gumshoejs": "^5.1.2",
+    "lucide": "^0.334.0",
+    "preline": "^2.0.3",
+    "shufflejs": "^6.1.0",
+    "swiper": "^11.0.6"
+  }
+}

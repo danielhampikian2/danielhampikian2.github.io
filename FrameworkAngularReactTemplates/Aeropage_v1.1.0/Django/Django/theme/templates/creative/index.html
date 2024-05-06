@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+{% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+{% endblock title-meta %} 
+
+{% block head-css %}
+    {% include 'partials/head-css.html' %}
+{% endblock head-css %}
+
+  </head>
+
+  <body class="bg-default-100">
+    {% block header %}
+        {% include 'creative/header.html' %}
+    {% endblock header %}
+
+    {% block mobileMenu %}
+        {% include 'creative/mobileMenu.html' %}
+    {% endblock mobileMenu %}
+ 
+    {% block hero %}
+        {% include 'creative/hero.html' %}
+    {% endblock hero %}
+
+    {% block marq %}
+        {% include 'creative/marq.html' %}
+    {% endblock marq %}
+
+    {% block features %}
+        {% include 'creative/features.html' %}
+    {% endblock features %}
+
+    {% block portfolio %}
+        {% include 'creative/portfolio.html' %}
+    {% endblock portfolio %}
+
+    {% block services %}
+        {% include 'creative/services.html' %}
+    {% endblock services %}
+
+    {% block testimonials %}
+        {% include 'creative/testimonials.html' %}
+    {% endblock testimonials %}
+    
+    {% block faq %}
+        {% include 'creative/faq.html' %}
+    {% endblock faq %}
+
+    {% block blog %}
+        {% include 'creative/blog.html' %}
+    {% endblock blog %}
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+        {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+        {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+
+  </body>
+</html>

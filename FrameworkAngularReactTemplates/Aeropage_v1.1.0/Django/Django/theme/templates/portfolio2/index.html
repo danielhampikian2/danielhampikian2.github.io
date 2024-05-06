@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+    {% endblock title-meta %}
+  
+    {% block head-css %}
+    {% include 'partials/head-css.html' %}
+    {% endblock head-css %}
+
+</head>
+
+<body>
+    {% block header %}
+        {% include 'portfolio2/header.html' %}
+    {% endblock header %}
+
+    {% block mobileMenu %}
+        {% include 'portfolio2/mobileMenu.html' %}
+    {% endblock mobileMenu %}
+
+    {% block hero %}
+        {% include 'portfolio2/hero.html' %}
+    {% endblock hero %}
+
+    {% block marq %}
+        {% include 'portfolio2/marq.html' %}
+    {% endblock marq %}
+
+    {% block about %}
+        {% include 'portfolio2/about.html' %}
+    {% endblock about %}
+
+    {% block project %}
+        {% include 'portfolio2/project.html' %}
+    {% endblock project %}
+
+    {% block advantage %}
+        {% include 'portfolio2/advantage.html' %}
+    {% endblock advantage %}
+
+    {% block section %}
+        {% include 'portfolio2/section.html' %}
+    {% endblock section %}
+
+    {% block testimonials %}
+        {% include 'portfolio2/testimonials.html' %}
+    {% endblock testimonials %}
+
+    {% block blog %}
+        {% include 'portfolio2/blog.html' %}
+    {% endblock blog %}
+
+    {% block section2 %}
+        {% include 'portfolio2/section2.html' %}
+    {% endblock section2 %}
+
+    
+
+    <!-- Footer -->
+    {% block footer %}
+    {% include 'charity/charity-footer.html' %}
+    {% endblock footer %}
+
+    <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+    </div>
+    {% block javascripts %}
+    {% include 'partials/javascripts.html' %}
+    {% endblock javascripts %}
+
+</body>
+
+</html>

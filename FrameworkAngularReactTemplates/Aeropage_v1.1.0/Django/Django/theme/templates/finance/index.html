@@ -1,0 +1,73 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+{% block title-meta %}
+    {% include 'partials/title-meta.html' %}
+{% endblock title-meta %} 
+
+{% block head-css %}
+    {% include 'partials/head-css.html' %}
+{% endblock head-css %}
+
+  </head>
+
+  <body>
+    {% block header %}
+        {% include 'finance/header.html' %}
+    {% endblock header %}
+
+    {% block mobileMenu %}
+        {% include 'finance/mobileMenu.html' %}
+    {% endblock mobileMenu %}
+    
+    {% block hero %}
+        {% include 'finance/hero.html' %}
+    {% endblock hero %}
+
+    {% block watchVideo %}
+        {% include 'finance/watchVideo.html' %}
+    {% endblock watchVideo %}
+
+    {% block marq %}
+        {% include 'finance/marq.html' %}
+    {% endblock marq %}
+
+    {% block experts %}
+        {% include 'finance/experts.html' %}
+    {% endblock experts %}
+
+    {% block features %}
+        {% include 'finance/features.html' %}
+    {% endblock features %}
+
+    {% block assets %}
+        {% include 'finance/assets.html' %}
+    {% endblock assets %}
+
+    {% block onboarding %}
+        {% include 'finance/onboarding.html' %}
+    {% endblock onboarding %}
+
+
+<!-- Footer -->
+{% block footer %}
+{% include 'charity/charity-footer.html' %}
+{% endblock footer %}
+
+<div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+{% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+{% endblock backtotop %}
+
+{% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+{% endblock lightdark %}
+
+</div>
+{% block javascripts %}
+{% include 'partials/javascripts.html' %}
+{% endblock javascripts %}
+
+  </body>
+</html>

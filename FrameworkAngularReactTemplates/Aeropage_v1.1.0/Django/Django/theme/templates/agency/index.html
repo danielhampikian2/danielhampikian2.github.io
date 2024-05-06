@@ -1,0 +1,86 @@
+{% load render_vite_bundle %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  {% block title-meta %}
+  {% include 'partials/title-meta.html' %}
+  {% endblock title-meta %}
+
+  {% block head-css %}
+  {% include 'partials/head-css.html' %}
+  {% endblock head-css %}
+
+
+</head>
+
+<body>
+  {% block header %}
+  {% include 'agency/header.html' %}
+  {% endblock header %}
+
+  {% block mobileMenu %}
+  {% include 'agency/mobileMenu.html' %}
+  {% endblock mobileMenu %}
+
+  {% block hero %}
+  {% include 'agency/hero.html' %}
+  {% endblock hero %}
+
+  {% block marq %}
+  {% include 'agency/marq.html' %}
+  {% endblock marq %}
+
+  {% block about %}
+  {% include 'agency/about.html' %}
+  {% endblock about %}
+
+  {% block services %}
+  {% include 'agency/services.html' %}
+  {% endblock services %}
+
+  {% block portfolio %}
+  {% include 'agency/portfolio.html' %}
+  {% endblock portfolio %}
+
+  {% block services2 %}
+  {% include 'agency/services2.html' %}
+  {% endblock services2 %}
+
+  {% block faq %}
+  {% include 'agency/faq.html' %}
+  {% endblock faq %}
+
+  {% block blog %}
+  {% include 'agency/blog.html' %}
+  {% endblock blog %}
+
+  {% block contact %}
+  {% include 'agency/contact.html' %}
+  {% endblock contact %}
+
+
+
+  {% block footer %}
+  {% include 'partials/footer.html' %}
+  {% endblock footer %}
+
+  <div class="fixed bottom-5 end-5 z-40 flex flex-col items-center gap-1">
+    {% block backtotop %}
+    {% include 'partials/backtotop.html' %}
+    {% endblock backtotop %}
+
+    {% block lightdark %}
+    {% include 'partials/lightdark.html' %}
+    {% endblock lightdark %}
+
+  </div>
+
+  {% block javascripts %}
+  {% include 'partials/javascripts.html' %}
+  {% endblock javascripts %}
+
+</body>
+
+</html>
